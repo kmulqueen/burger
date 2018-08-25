@@ -3,7 +3,9 @@ const orm = require("../config/orm.js");
 const burger = {
     all: function(cb) {
         orm.selectAll("burgers", function(res) {
+               console.log("res", res)
             cb(res);
+         
         });
     },
     insert: function(cols, vals, cb) {
